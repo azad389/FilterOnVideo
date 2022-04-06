@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FiltersDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="OCO-Yp-CBa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="766"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DpW-kt-set">
+                                <rect key="frame" x="94.5" y="818" width="225" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ4-lb-CuO">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vba-P9-dWM"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Change Filter"/>
+                                        <connections>
+                                            <action selector="btnChangeFilterTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1e5-vG-VDc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G6-N0-TRl">
+                                        <rect key="frame" x="100" y="0.0" width="72" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Vcm-5K-HY8"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Play Video"/>
+                                        <connections>
+                                            <action selector="btnPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eh9-rm-trB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92H-s7-3F5">
+                                        <rect key="frame" x="180" y="0.0" width="45" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Export"/>
+                                        <connections>
+                                            <action selector="btnExportTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWP-Vc-eYd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OCO-Yp-CBa" secondAttribute="trailing" id="Pxu-ad-NAd"/>
+                            <constraint firstItem="OCO-Yp-CBa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TuC-GB-ygh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DpW-kt-set" secondAttribute="bottom" id="ovt-oD-c9Z"/>
+                            <constraint firstItem="DpW-kt-set" firstAttribute="top" secondItem="OCO-Yp-CBa" secondAttribute="bottom" constant="8" symbolic="YES" id="rl9-zx-hRC"/>
+                            <constraint firstItem="DpW-kt-set" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgd-7h-j7Z"/>
+                            <constraint firstItem="OCO-Yp-CBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xbg-vB-Ef9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="OCO-Yp-CBa" id="EU4-gS-Edj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img" width="612" height="408"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
