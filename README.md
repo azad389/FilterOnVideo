@@ -1,5 +1,6 @@
 # FilterOnVideo
  
+       self.filter = CIFilter(name: "CIPhotoEffectTonal")!
         let urlVideofile = Bundle.main.url(forResource: "Azaan", withExtension: "mov")
         let videoAsset = AVAsset(url: urlVideofile!)
         let eagl = EAGLContext(api: EAGLRenderingAPI.openGLES2)
